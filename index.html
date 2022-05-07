@@ -1,32 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <title>SHRISTI 2k21 | Web App Development</title>
+  <title>SHRISTI 2k21 | Web App Development</title>
 
+</head>
+
+<body>
+
+
+  <!DOCTYPE html>
+  <style>
+    .dropbtn {
+      background-color: white;
+      color: black;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover,
+    .dropbtn:focus {
+      background-color: white;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      overflow: auto;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown a:hover {
+      background-color: #ddd;
+    }
+
+    .show {
+      display: block;
+    }
+  </style>
   </head>
 
   <body>
+    <h1>snap</h1>
+    <div>  
+    <div class="dropdown">
 
-    Features
-    Company
-    Careers
-    About
+      <button onclick="myFunction()" class="dropbtn">Features</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#home" <img src="./images/icon-todo.svg">Todo list</a>
+        <a href="#about"<img src="./images/icon-calendar.svg">Calendar</a>
+        <a href="#contact"<img src="./images/icon-reminders.svg" >Remainders</a>
+        <a href="#contact"<img src="./images/icon-planning.svg">Planning</a>
+        <!-- <button onclick="myFunction()" class="dropbtn">Company</button> -->
 
-    Login
-    Register
+      </div>
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">Company</button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#home">History</a>
+          <a href="#about">Our team</a>
+          <a href="#contact">Blog</a>
+          <!-- <button onclick="myFunction()" class="dropbtn">Company</button> -->
+        </div>
+        <a href="#careers"  min-width: 160px>Careers</a>
 
-    Make remote work
 
-    Get your team in sync, no matter your location. Streamline processes,
-    create team rituals, and watch productivity soar.
+        <a href="#about">About</a>
+        
+        </div>
+        <a align="right" href="#register">Register</a>
+    </div>
+    </div>
 
-    Learn more
+        <script>
 
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+
+          // Close the dropdown if the user clicks outside of it
+          window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+              var dropdowns = document.getElementsByClassName("dropdown-content");
+              var i;
+              for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                  openDropdown.classList.remove('show');
+                }
+              }
+            }
+          }
+        </script>
+        <img src="images/image-hero-desktop.png" width="700" height ="600" align="right">
+        <!-- <img align="left"> -->
+        <div margin="auto">Make remote work</div>
+        <!-- <h1>remote work</h1> -->
+        <p style="font: size 345px; ">Make remote work</p>
+        <h4>Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.</h4>
 
   </body>
 
